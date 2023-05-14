@@ -1,0 +1,51 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: monospace;
+}
+.container {
+   width: 100%;
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: linear-gradient(45deg, rgb(255, 2, 2), rgb(11, 11, 247));
+}
+h2 {
+   position: relative;
+   display: flex;
+   gap: 25px;
+   font-size: 7em;
+   cursor: pointer;
+}
+
+h2 span {
+   position: relative;
+   filter: blur(4px);
+   padding: 0 5px;
+   transition: 0.3s;
+}
+
+h2 span:hover {
+   filter: blur(0);
+   transition: 0;
+}
+
+h2 span i {
+   position: absolute;
+   inset: 0;
+   background: transparent;
+}
+
+h2 span:hover i::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 5px;
+   height: 2px;
+   background-color: #fff;
+   box-shadow: 0 89px white, white 55px 89px, white 55px 0px;
+}
+
